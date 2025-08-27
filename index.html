@@ -6,162 +6,128 @@
   <title>Godavari Go Gas Agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --red: #e53935;
-      --green: #388e3c;
-      --background: #f8fff5;
-      --card-bg: #fff;
-      --accent: #e53935;
-      --text-dark: #212121;
-      --text-light: #fff;
-      --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    }
     body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: var(--background);
-      color: var(--text-dark);
-      line-height: 1.5;
+      margin: 0; font-family: 'Poppins', sans-serif; background: #f5f5f5; color: #222;
     }
     header {
-      background: linear-gradient(90deg, var(--red) 60%, var(--green) 100%);
-      padding: 1.2rem;
-      text-align: center;
-      color: var(--text-light);
-      font-weight: 700;
-      letter-spacing: 2px;
-      font-size: 1.8rem;
-      box-shadow: 0 6px 18px -8px var(--red), 0 2px 8px var(--green);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      background: linear-gradient(90deg, #d32f2f 60%, #388e3c 100%);
+      padding: 1rem 0; color: white; text-align: center; font-weight: 700; letter-spacing: 2px; font-size: 1.8rem;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-    main {
-      max-width: 900px;
-      margin: 2rem auto 4rem;
-      padding: 0 1rem;
+    nav {
+      display: flex; justify-content: center; gap: 2rem; background: #2e7d32; padding: 0.7rem 0;
+      position: sticky; top: 56px; z-index: 99;
+    }
+    nav a {
+      color: white; text-decoration: none; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #b71c1c;
+    }
+    .hero {
+      max-width: 960px; margin: 2rem auto; padding: 0 1rem;
+      background: white; border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+      display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;
+    }
+    .hero img {
+      width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+    .hero-content {
+      flex: 1;
     }
     h1 {
-      color: var(--red);
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-align: center;
-      letter-spacing: 1.5px;
+      color: #d32f2f; margin-bottom: 1rem;
     }
     h2 {
-      color: var(--green);
-      margin-bottom: 1rem;
-      border-bottom: 3px solid var(--red);
-      padding-bottom: 0.4rem;
+      color: #388e3c; margin-bottom: 1rem;
     }
     form {
-      background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      max-width: 480px;
-      margin: 0 auto 3rem auto;
+      background: #e8f5e9; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      max-width: 480px; margin: 3rem auto 4rem;
     }
-    form label {
-      display: block;
-      font-weight: 600;
-      margin-top: 1rem;
-      color: var(--green);
+    label {
+      display: block; font-weight: 600; margin-top: 1em; color: #2e7d32;
     }
-    form input[type="tel"],
-    form textarea {
-      width: 100%;
-      padding: 0.7rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      margin-top: 0.3rem;
-      font-size: 1rem;
-      font-family: inherit;
-      transition: border-color 0.2s;
+    input[type=tel], textarea {
+      width: 100%; padding: 0.6rem; margin-top: 0.3rem; border-radius: 8px; border: 1px solid #a5d6a7;
+      font-size: 1rem; font-family: inherit;
+      transition: border-color 0.3s;
     }
-    form input[type="tel"]:focus,
-    form textarea:focus {
-      border-color: var(--red);
-      outline: none;
-      box-shadow: 0 0 6px var(--red);
+    input[type=tel]:focus, textarea:focus {
+      border-color: #d32f2f; outline: none; box-shadow: 0 0 6px #d32f2f;
     }
-    form button {
-      margin-top: 1.5rem;
-      background: var(--green);
-      color: var(--text-light);
-      border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
-      letter-spacing: 1px;
-      box-shadow: 0 2px 8px var(--red) inset;
-      transition: background 0.15s;
-      width: 100%;
+    button {
+      width: 100%; margin-top: 1.5rem; background: #388e3c; color: white; border: none;
+      padding: 0.9rem; font-weight: 700; border-radius: 8px; cursor: pointer;
+      font-size: 1.1rem; letter-spacing: 1px;
+      transition: background 0.3s ease;
     }
-    form button:hover {
-      background: var(--red);
+    button:hover {
+      background: #d32f2f;
     }
-    .bookwa {
-      display: block;
-      max-width: 230px;
-      margin: 1rem auto 3rem;
-      background: var(--red);
-      color: var(--text-light);
-      padding: 0.8rem 1.3rem;
-      border-radius: 8px;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      box-shadow: 0 1px 8px var(--green);
-      transition: background 0.2s;
+    .whatsapp-btn {
+      display: block; background: #d32f2f; color: white; max-width: 220px;
+      margin: 0 auto 3rem; text-align: center; padding: 0.8rem 1.2rem;
+      font-weight: 700; border-radius: 8px; text-decoration: none;
+      box-shadow: 0 0 10px #388e3c;
+      transition: background 0.3s ease;
     }
-    .bookwa:hover {
-      background: var(--green);
+    .whatsapp-btn:hover {
+      background: #388e3c;
     }
     .contact-info {
-      background: linear-gradient(90deg, #fff 80%, #e2ffe0 100%);
-      box-shadow: 0 2px 12px -6px var(--green);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
-      max-width: 480px;
-      margin: 2rem auto 0;
-      text-align: center;
-      font-size: 1.1rem;
-      color: var(--text-dark);
+      background: white; border-radius: 12px; max-width: 480px; margin: 0 auto 4rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12); padding: 1.5rem; text-align: center;
+      color: #2e7d32;
     }
     .contact-info h2 {
-      color: var(--red);
-      margin-bottom: 1rem;
+      margin-bottom: 1rem; color: #d32f2f;
     }
     .contact-info a {
-      color: var(--green);
-      text-decoration: underline;
+      display: block; margin: 0.5rem 0; color: #388e3c; font-weight: 600; text-decoration: underline;
     }
-    .address-box {
-      margin-top: 1.2rem;
-      background: var(--green);
-      color: var(--text-light);
-      padding: 1rem;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      box-shadow: 0 6px 14px rgba(62, 113, 61, 0.45);
+    .address {
+      margin-top: 1rem; background: #388e3c; color: white; padding: 1rem; border-radius: 12px;
+      box-shadow: 0 4px 10px rgb(58 113 58 / 0.6);
+      font-weight: 600;
     }
     iframe {
-      border-radius: 12px;
-      width: 100%;
-      height: 300px;
-      margin-top: 1rem;
-      border: none;
-      box-shadow: var(--shadow);
+      width: 100%; height: 300px; border: none; border-radius: 12px; margin-top: 1rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    /* Responsive */
+    @media(max-width: 700px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero img {
+        width: 100%;
+        max-width: 320px;
+      }
+      form, .contact-info {
+        width: 90%; max-width: none;
+      }
     }
   </style>
 </head>
 <body>
   <header>Godavari Go Gas Agency</header>
-  <main>
-    <h1>Book 19.2kg LPG Cylinder</h1>
+  <nav>
+    <a href="#booking">Book Cylinder</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+  <section class="hero">
+    <img src="assets/hero.jpg" alt="LPG Cylinder Delivery" />
+    <div class="hero-content">
+      <h1>Reliable LPG Cylinder Delivery</h1>
+      <p>Offering fast and safe delivery services for 19.2kg gas cylinders in Andhra Pradesh. Book your cylinder online or via WhatsApp for quick service at your doorstep.</p>
+    </div>
+  </section>
+
+  <section id="booking">
     <form action="https://formspree.io/f/xpwlgnkg" method="POST">
       <input type="hidden" name="Cylinder Type" value="19.2kg" />
       <label for="mobile">Mobile Number:</label>
@@ -170,24 +136,22 @@
       <textarea id="address" name="Address" rows="3" placeholder="Enter your full address" required></textarea>
       <button type="submit">Book Cylinder</button>
     </form>
-
-    <a href="https://wa.me/919640648468?text=I want to book a 19.2kg Go Gas cylinder. My details are [enter address here]" class="bookwa" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/919640648468?text=I want to book a 19.2kg Go Gas cylinder. My details are [enter address here]" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
       Book via WhatsApp
     </a>
+  </section>
 
-    <section class="contact-info">
-      <h2>Contact Us</h2>
-      <p>Phone 1: <a href="tel:+919640648468">9640648468</a></p>
-      <p>Phone 2: <a href="tel:+917780213857">7780213857</a></p>
-      <p>Email: <a href="mailto:godavarigogasagency@gmail.com">godavarigogasagency@gmail.com</a></p>
-      <div class="address-box">
-        Office Address: <br />
-        <a href="https://maps.app.goo.gl/tXf8y4ya8jz9YtX4A" target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:underline;">
-          Amalapuram, Andhra Pradesh
-        </a>
-      </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.8839793300122!2d82.06005287447555!3d16.53542592292291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fb45984ab3b1%3A0x18637b45b94fda49!2sAmalapuram!5e0!3m2!1sen!2sin!4v1693135968304!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0; border-radius:12px; width:100%; height:300px;"></iframe>
-    </section>
-  </main>
+  <section id="contact" class="contact-info">
+    <h2>Contact Us</h2>
+    <a href="tel:+919640648468">9640648468</a>
+    <a href="tel:+917780213857">7780213857</a>
+    <a href="mailto:godavarigogasagency@gmail.com">godavarigogasagency@gmail.com</a>
+    <div class="address">
+      <a href="https://maps.app.goo.gl/tXf8y4ya8jz9YtX4A" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: underline;">
+        Amalapuram, Andhra Pradesh
+      </a>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.8839793300122!2d82.06005287447555!3d16.53542592292291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fb45984ab3b1%3A0x18637b45b94fda49!2sAmalapuram!5e0!3m2!1sen!2sin!4v1693135968304!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
 </body>
 </html>
